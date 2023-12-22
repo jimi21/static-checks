@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  This orb will carry out math operations such as addition via reusable commands.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 

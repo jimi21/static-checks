@@ -22,13 +22,13 @@ workflows:
       - orb-tools/publish:
           orb-name: jimicircleci/static-checks
           vcs-type: << pipeline.project.type >>
-          requires: [orb-tools/lint, orb-tools/pack, orb-tools/review, shellcheck/check]
+          requires: [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
           context: orb-publishing
           filters: *filters
       # Triggers the next workflow in the Orb Development Kit.
       - orb-tools/continue:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
-          orb_name: static-checks
+          # orb_name: static-checks
           requires: [orb-tools/publish]
           filters: *filters
