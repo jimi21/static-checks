@@ -29,6 +29,6 @@ workflows:
       - orb-tools/continue:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
-          # orb_name: static-checks
+          orb_name: static-checks
           requires: [orb-tools/publish]
           filters: *filters
